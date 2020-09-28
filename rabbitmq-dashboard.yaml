@@ -1,0 +1,17 @@
+id: rabbitmq-dashboard
+
+info:
+  name: RabbitMQ Dashboard
+  author: fyoorer
+  severity: info
+
+requests:
+  - method: GET
+    path:
+      - '{{BaseURL}}'
+      - "{{BaseURL}}:15672"
+    matchers:
+      - type: word
+        words:
+          - "RabbitMQ Management"
+        part: body
