@@ -1,2 +1,1 @@
-# nuclei-bb-templates
-# nuclei-bb-templates
+ctrl + w
