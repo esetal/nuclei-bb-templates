@@ -1,0 +1,24 @@
+id: graphql
+
+info:
+  name: GraphQL API
+  author: NkxxkN
+  severity: info
+
+requests:
+  - method: POST
+    path:
+      - "{{BaseURL}}/graphql"
+      - "{{BaseURL}}/graphiql"
+      - "{{BaseURL}}/graphql.php"
+      - "{{BaseURL}}/graphql/console"
+      - "{{BaseURL}}/v1"
+      - "{{BaseURL}}/v2"
+      - "{{BaseURL}}/v3"
+    headers:
+      Content-Type: application/json
+    body: '{"query":"query IntrospectionQuery{__schema {queryType { name }}}"}'
+    matchers:
+      - type: word
+        words:
+          - '{"data":{"__schema":{"queryType":'
