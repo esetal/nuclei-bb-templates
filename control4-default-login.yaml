@@ -38,11 +38,6 @@ requests:
         - t0talc0ntr0l4!
 
     matchers:
-      - type: dsl
-        dsl:
-          - len(body) == 75
-          - status_code == 200
-        condition: and
       - type: word
         words:
           - "sid"
